@@ -1,0 +1,96 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: 0;
+}
+
+.container{
+    width: 80%;
+    padding: 20px;
+    border: 0.5px solid rgba(70, 70, 70, 0.148);
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #e9e6e6;
+    box-shadow: 0px 0px 10px 0px #00000044;
+}
+
+.container:hover{
+    box-shadow: 0px 0px 20px 0px #8f8a8a8f;
+}
+
+h1, h4, p, .socials{
+    text-align: center;
+}
+
+.contents{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+h1{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h4{
+    margin-top: 0;
+}
+
+ul{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.hobbies h4{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hobbies li{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hobbies{
+    padding-top: 0;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hobby-text{
+    padding-bottom: 0;
+}
+
+.btn{
+    border-radius:5px;
+}
+.socials a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-fb{
+    background-color: #3b5998;
+}
+
+.btn-ig{
+    background-color: #f8153f;
+}
+
+.btn-tk{
+    background-color: #000000;
+}
+
+.socials a:hover{
+    cursor: pointer;
+    background-color: #555;
+}
