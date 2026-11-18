@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houses for Sale | Activity Three</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            background: #191e24;
+            color: #1b1d27;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .property-listings {
+            max-width: 1536px;
+            padding: 72px 4.1% 78px;
+        }
+
+        .property-grid { --bs-gutter-x: 20px; --bs-gutter-y: 24px; }
+
+        .property-card {
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid #dfe1e5;
+            border-radius: 13px;
+            background: #fff;
+        }
+
+        .property-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 13px 22px;
+            border: 0;
+            background: #68727e;
+            color: #fff;
+        }
+
+        .property-header h2 {
+            margin: 0;
+            font-size: clamp(25px, 2.4vw, 38px);
+            font-weight: 700;
+        }
+
+        .close-badge {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            width: 51px;
+            height: 51px;
+            border-radius: 50%;
+            background: #df3345;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .property-body { padding: 20px 19px 42px; }
+
+        .property-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1.32;
+            object-fit: cover;
+            border-radius: 11px;
+        }
+
+        .property-summary {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 4px 12px;
+            margin: 20px 0 10px;
+        }
+
+        .property-name, .property-price {
+            margin: 0;
+            font-size: clamp(22px, 1.85vw, 29px);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .property-price { color: #ff9000; white-space: nowrap; }
+
+        .property-description, .feature-list {
+            font-size: clamp(19px, 1.56vw, 24px);
+            line-height: 1.38;
+        }
+
+        .property-description { margin: 0; min-height: 4.14em; }
+        .property-features { margin-top: 21px; padding-top: 8px; border-top: 1px solid #a2a6ae; }
+        .property-features h4 { margin: 0 0 3px; font-size: 28px; font-weight: 700; }
+        .feature-list { margin: 0; padding-left: 42px; }
+        .feature-list li { padding-left: 3px; }
+
+        @media (max-width: 1199.98px) and (min-width: 992px) {
+            .property-header { padding: 13px 16px; }
+            .close-badge { width: 42px; height: 42px; font-size: 27px; }
+        }
+
+        @media (max-width: 991.98px) {
+            .property-listings { max-width: 680px; padding: 32px 20px; }
+            .property-header h2 { font-size: 30px; }
+            .property-description { min-height: 0; }
+            .property-body { padding-bottom: 28px; }
+            .property-name, .property-price { font-size: 25px; }
+        }
+
+        @media (max-width: 399.98px) {
+            .property-listings { padding: 20px 12px; }
+            .property-header { padding: 12px 16px; }
+            .property-header h2 { font-size: 27px; }
+            .close-badge { width: 42px; height: 42px; font-size: 27px; }
+            .property-body { padding: 16px 14px 26px; }
+        }
+    </style>
+</head>
+<body>
+    <main class="container-fluid property-listings" aria-label="Houses for sale">
+        <h1 class="visually-hidden">Houses for Sale</h1>
+        <div class="row property-grid">
+            <div class="col-12 col-lg-4">
+                <article class="card property-card">
+                    <header class="card-header property-header">
+                        <h2>House for Sale</h2>
+                        <span class="close-badge" aria-hidden="true">X</span>
+                    </header>
+                    <div class="card-body property-body">
+                        <img src="assets/img/download.jpeg" alt="Two-story rural house with a front lawn and garage" class="property-image">
+                        <div class="property-summary">
+                            <h3 class="property-name">Rural House</h3>
+                            <p class="property-price">&#8369;3,800,000</p>
+                        </div>
+                        <p class="property-description">A spacious house in a peaceful rural area, perfect for families who value space and tranquility.</p>
+                        <section class="property-features" aria-label="Rural House features">
+                            <h4>Features:</h4>
+                            <ul class="feature-list">
+                                <li>4 Bedrooms</li>
+                                <li>3 Bathrooms</li>
+                                <li>2-Car Garage</li>
+                                <li>Wide Lot (350 sqm)</li>
+                                <li>Outdoor Swing</li>
+                                <li>Basic Furniture Inclusions</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-lg-4">
+                <article class="card property-card">
+                    <header class="card-header property-header">
+                        <h2>House for Sale</h2>
+                        <span class="close-badge" aria-hidden="true">X</span>
+                    </header>
+                    <div class="card-body property-body">
+                        <img src="assets/img/Nature _ living _ Greenery _ Luxury modern house….jpeg" alt="Contemporary house surrounded by greenery" class="property-image">
+                        <div class="property-summary">
+                            <h3 class="property-name">Modern House</h3>
+                            <p class="property-price">&#8369;5,600,000</p>
+                        </div>
+                        <p class="property-description">A stylish and contemporary home with modern design, open spaces, and quality finishes.</p>
+                        <section class="property-features" aria-label="Modern House features">
+                            <h4>Features:</h4>
+                            <ul class="feature-list">
+                                <li>4 Bedrooms</li>
+                                <li>4 Bathrooms</li>
+                                <li>2-Car Garage</li>
+                                <li>Private Swimming Pool</li>
+                                <li>Landscaped Garden</li>
+                                <li>Built-in Cabinets and Kitchen Set</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-lg-4">
+                <article class="card property-card">
+                    <header class="card-header property-header">
+                        <h2>House for Sale</h2>
+                        <span class="close-badge" aria-hidden="true">X</span>
+                    </header>
+                    <div class="card-body property-body">
+                        <img src="assets/img/บ้านมีประวัติ บน TikTok.jpeg" alt="Classic white house with a spacious front porch" class="property-image">
+                        <div class="property-summary">
+                            <h3 class="property-name">Notebook House</h3>
+                            <p class="property-price">&#8369;7,200,000</p>
+                        </div>
+                        <p class="property-description">A charming, classic home with a vintage feel, ideal for those who love timeless architecture.</p>
+                        <section class="property-features" aria-label="The Notebook House features">
+                            <h4>Features:</h4>
+                            <ul class="feature-list">
+                                <li>5 Bedrooms</li>
+                                <li>4 Bathrooms</li>
+                                <li>3-Car Garage</li>
+                                <li>Swimming Pool</li>
+                                <li>Spacious Lot (500 sqm)</li>
+                                <li>Fully Furnished</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
