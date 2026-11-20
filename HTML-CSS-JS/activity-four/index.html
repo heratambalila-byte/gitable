@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rachel Heart U. Tambalila">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Ugnayan UMDC | Find your circle</title>
+</head>
+<body>
+    <a class="skip-link" href="#home">Skip to content</a>
+    <header>
+      <div class="header-content page-width">
+        <a href="#home" class="brand">Ugnayan <span>UMDC</span></a>
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#clubs">Explore Clubs</a>
+            <a href="#about">About</a>
+        </nav>
+        <a href="#register" class="button join-button">Register</a>
+      </div>
+    </header>
+
+    <main id="home">
+        <section class="welcome page-width" aria-labelledby="welcome-title">
+            <div class="welcome-copy">
+                <p class="eyebrow">Your campus. Your community.</p>
+                <h1 id="welcome-title">Find your circle<br>at <span>UMDC.</span></h1>
+                <p class="lead">Discover student clubs, explore your interests, and connect with people across campus.</p>
+                <div class="actions">
+                    <a class="button" href="#clubs">Explore Clubs</a>
+                    <a class="text-link" href="#register">Register Your Interest</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="interests page-width" id="clubs" aria-labelledby="interests-title">
+            <p class="eyebrow">Explore interests</p>
+            <h2 id="interests-title">There's a place for what you love.</h2>
+            <p class="section-description">Start with an interest. These categories are a starting point, not a list of confirmed clubs.</p>
+            <div class="interest-grid">
+                <article class="interest-card"><span class="category-number" aria-hidden="true">01</span><h3>Arts &amp; Creativity</h3><p>Explore creative activities and ideas.</p></article>
+                <article class="interest-card"><span class="category-number" aria-hidden="true">02</span><h3>Technology</h3><p>Connect with students interested in tech.</p></article>
+                <article class="interest-card"><span class="category-number" aria-hidden="true">03</span><h3>Service &amp; Leadership</h3><p>Find ways to contribute and lead.</p></article>
+                <article class="interest-card"><span class="category-number" aria-hidden="true">04</span><h3>Sports &amp; Wellness</h3><p>Discover activities for movement and well-being.</p></article>
+            </div>
+        </section>
+
+        <section class="how-to" aria-labelledby="how-title">
+            <div class="page-width how-layout">
+                <div><p class="eyebrow">How to join</p><h2 id="how-title">Getting involved<br>is simple.</h2></div>
+                <ol class="steps">
+                    <li><span>1</span><h3>Explore clubs</h3><p>Start with the interests that speak to you.</p></li>
+                    <li><span>2</span><h3>Choose an interest</h3><p>Think about what you would like to try.</p></li>
+                    <li><span>3</span><h3>Register</h3><p>Tell us a little about yourself.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="about page-width" id="about" aria-labelledby="about-title">
+            <p class="eyebrow">About Ugnayan UMDC</p>
+            <h2 id="about-title">A starting point for campus connections.</h2>
+            <p>Ugnayan UMDC helps students explore interests and take a first step toward campus involvement. The interest categories above are a starting point while actual club information is being added.</p>
+        </section>
+
+        <section class="closing page-width" aria-labelledby="closing-title">
+            <div><h2 id="closing-title">Ready to find your community?</h2><p>Take a first step and register your interest.</p></div>
+            <a href="#register" class="button">Join a Club</a>
+        </section>
+
+        <section class="registration page-width" id="register" aria-labelledby="registration-title">
+            <div class="registration-intro"><p class="eyebrow">Start here</p><h2 id="registration-title">Register your interest.</h2><p>Your next campus connection starts with a hello.</p></div>
+            <div class="join-section">
+                <p class="form-note" id="form-note">Fields marked * are required. This practice form reloads the page; it does not create an account or save your interest.</p>
+                <form method="get" aria-describedby="form-note">
+                    <label for="student-name">Full name *</label>
+                    <input type="text" id="student-name" autocomplete="name" required>
+                    <label for="student-email">Email address *</label>
+                    <input type="email" id="student-email" autocomplete="email" required>
+                    <label for="course">Course *</label>
+                    <select id="course" required>
+                        <option value="">Select your course</option>
+                        <option value="bsit">BS Information Technology</option>
+                        <option value="bscs">BS Computer Science</option>
+                        <option value="bsba">BS Business Administration</option>
+                    </select>
+                    <label for="reason">Why do you want to join? (optional)</label>
+                    <textarea id="reason" rows="4"></textarea>
+                    <button type="submit" class="button submit-button">Submit registration</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer><div class="page-width footer-content"><a href="#home" class="brand">Ugnayan <span>UMDC</span></a><p>Find your interests. Find your people.</p></div></footer>
+</body>
+</html>

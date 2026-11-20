@@ -1,0 +1,425 @@
+/* Main colors */
+:root {
+    --red: #BC0000;
+    --white: #FFFDF5;
+    --yellow: #FFFF00;
+    --muted: #d0c4c7;
+    --border: #65545c;
+    --panel: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 120px;
+}
+
+body {
+    background-color: #0c090f;
+    /* Soft red clouds, like the earlier background. */
+    background-image:
+        radial-gradient(ellipse at top left, rgba(188, 0, 0, 0.6), transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(150, 15, 45, 0.5), transparent 60%);
+    background-attachment: fixed;
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.375rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-top: 12px;
+}
+
+.page-width {
+    width: 90%;
+    max-width: 1120px;
+    margin: auto;
+}
+
+/* Header: name on the left, navigation in the center */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #1c1117;
+    padding: 20px 3%;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 24px;
+    width: 90%;
+    max-width: 1116px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+nav a:hover, .text-link:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.join-button {
+    justify-self: end;
+}
+
+/* Shared button styles */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    min-height: 44px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--yellow);
+    color: #222;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #e6e600;
+}
+
+/* A simple transparent panel for the page */
+main {
+    width: 94%;
+    max-width: 1240px;
+    margin: 32px auto;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+/* Center the welcome message and its buttons. */
+.welcome {
+    padding: 64px 0;
+    text-align: center;
+}
+
+.welcome-copy {
+    max-width: 720px;
+    margin: auto;
+}
+
+/* Keep the registration heading above a centered form. */
+.registration {
+    max-width: 640px;
+    padding: 48px 0;
+}
+
+.registration-intro {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.eyebrow, .category-number {
+    color: var(--yellow);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.eyebrow {
+    margin-bottom: 16px;
+}
+
+.lead, .section-description, .form-note,
+.interest-card p, .closing p, .registration-intro p, footer p {
+    color: var(--muted);
+}
+
+.registration-intro .eyebrow {
+    color: var(--yellow);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 48px;
+    padding: 10px 0;
+    text-underline-offset: 4px;
+}
+
+/* Interest cards */
+.interests, .about {
+    padding: 48px 0;
+    border-top: 1px solid var(--border);
+}
+
+.about p:last-child {
+    max-width: 65ch;
+    color: var(--muted);
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.interest-card, .join-section {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--panel);
+}
+
+.interest-card h3 {
+    margin-top: 16px;
+}
+
+.interest-card {
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+@media (hover: hover) {
+    .interest-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--yellow);
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .interest-card {
+        transition: none;
+    }
+
+    .interest-card:hover {
+        transform: none;
+    }
+}
+
+/* Joining instructions */
+.how-to {
+    padding: 48px 0;
+    background-color: rgba(188, 0, 0, 0.12);
+    border-top: 1px solid var(--border);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+    list-style: none;
+}
+
+.steps li > span {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.steps h3 {
+    margin-top: 8px;
+}
+
+.closing, .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.closing {
+    padding: 48px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.closing .button {
+    flex-shrink: 0;
+}
+
+/* Registration form */
+
+.form-note {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--white);
+    color: #222;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline-color: var(--red);
+    outline-offset: -3px;
+}
+
+.submit-button {
+    align-self: flex-start;
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.submit-button:hover {
+    background-color: #960000;
+}
+
+footer {
+    width: 94%;
+    max-width: 1240px;
+    margin: auto;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+}
+
+/* Make keyboard navigation easy to see */
+:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    padding: 12px;
+    background-color: var(--white);
+    color: var(--red);
+    z-index: 1;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Stack the columns on smaller screens */
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 184px;
+    }
+
+    .header-content {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 16px;
+    }
+
+    nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 2.375rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .interest-grid, .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .closing, .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .welcome {
+        padding: 40px 0;
+    }
+
+    .interests, .about, .how-to, .closing, .registration {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .join-section {
+        padding: 20px;
+    }
+}
